@@ -11,4 +11,6 @@ sequelize
     console.error('Unable to connect to the database:', err);
   });
 
-module.exports = (req) => 'Hello from node (with sequelize)'
+module.exports = (req, res) => {
+  res.end(`Hello ${name}!`)
+}

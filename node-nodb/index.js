@@ -1,1 +1,3 @@
-module.exports = (req) => 'Hello from node (with sequelize)'
+module.exports = (req, res) => {
+  res.end(`Hello from vanilla node (no db)`)
+}
