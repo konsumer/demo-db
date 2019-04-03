@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "demo-db",
+  "env": {
+    "DATABASE_URI": "sqlite:///tmp/splitcube.sqlite"
+  },
+  "builds": [
+    {
+      "src": "node-server/index.js",
+      "use": "@now/node-server"
+    },
+    {
+      "src": "node/index.js",
+      "use": "@now/node"
+    },
+    {
+      "src": "node-nodb/index.js",
+      "use": "@now/node"
+    }
+  ]
+}

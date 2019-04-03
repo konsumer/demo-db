@@ -1,0 +1,12 @@
+{
+  "name": "@demo/db",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "now"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "now": "^15.0.1"
+  }
+}

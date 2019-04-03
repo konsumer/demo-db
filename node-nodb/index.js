@@ -1,0 +1,1 @@
+module.exports = (req) => 'Hello from node (with sequelize)'
