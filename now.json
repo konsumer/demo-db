@@ -7,15 +7,15 @@
   "builds": [
     {
       "src": "node-server/index.js",
-      "use": "@now/node-server"
+      "use": "@now/node-server@canary"
     },
     {
       "src": "node/index.js",
-      "use": "@now/node"
+      "use": "@now/node@canary"
     },
     {
       "src": "node-nodb/index.js",
-      "use": "@now/node"
+      "use": "@now/node@canary"
     }
   ]
 }
