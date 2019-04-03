@@ -1,8 +1,9 @@
 {
   "version": 2,
   "name": "demo-db",
+  "public": true,
   "env": {
-    "DATABASE_URI": "sqlite:///tmp/splitcube.sqlite"
+    "DATABASE_URI": "sqlite:///tmp/demo.sqlite"
   },
   "builds": [
     {
