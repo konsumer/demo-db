@@ -7,6 +7,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "now": "^15.0.1"
+    "now": "canary"
   }
 }
