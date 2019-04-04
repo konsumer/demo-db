@@ -14,6 +14,7 @@ sequelize
 
 const app = express()
 app.get('*', (req, res) => {
-  res.send('Hello from node-server (with sequelize)')
+  res.send(`Hello from node-server. Your database is at ${process.env.DATABASE_URI}. I tried to touch it.`)
 })
+
 app.listen()

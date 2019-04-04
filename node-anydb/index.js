@@ -14,5 +14,5 @@ const main = async () => {
 main()
 
 module.exports = (req, res) => {
-  res.end('Hello from node-anydb.')
+  res.end(`Hello from node-anydb. Your database is at ${process.env.DATABASE_URI}. I tried to touch it.`)
 }

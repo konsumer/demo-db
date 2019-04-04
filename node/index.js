@@ -12,5 +12,5 @@ sequelize
   });
 
 module.exports = (req, res) => {
-  res.end('Hello from node.')
+  res.end(`Hello from node. Your database is at ${process.env.DATABASE_URI}. I tried to touch it.`)
 }
