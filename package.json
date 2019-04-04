@@ -5,7 +5,9 @@
   "scripts": {
     "deploy": "now"
   },
-  "dependencies": {},
+  "dependencies": {
+    "sql.js": "^0.5.0"
+  },
   "devDependencies": {
     "now": "canary"
   }
