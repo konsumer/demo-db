@@ -4,12 +4,7 @@ const db = createConnection(process.env.DATABASE_URI.replace(/^sqlite:/, 'sqlite
 
 // promisify doesn't seem to work here
 const query = q => new Promise((resolve, reject) => {
-  db.query(q, (err, res) => {
-    if (err) {
-      return reject(err)
-    }
-    resolve(res)
-  })
+  db.query(q, (err, res) => err ? reject(err) : resolve(res))
 })
 
 const main = async () => {
