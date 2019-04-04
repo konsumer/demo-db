@@ -1,0 +1,8 @@
+{
+  "name": "node-anydb",
+  "version": "0.0.0",
+  "dependencies": {
+    "any-db": "^2.2.1",
+    "any-db-sqlite3": "^2.1.4"
+  }
+}

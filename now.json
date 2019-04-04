@@ -17,6 +17,10 @@
     {
       "src": "node-nodb/index.js",
       "use": "@now/node@canary"
+    },
+    {
+      "src": "node-anydb/index.js",
+      "use": "@now/node@canary"
     }
   ]
 }

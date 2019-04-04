@@ -12,5 +12,5 @@ sequelize
   });
 
 module.exports = (req, res) => {
-  res.end(`Hello ${name}!`)
+  res.end('Hello from node.')
 }
