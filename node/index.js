@@ -1,3 +1,6 @@
+// primes the dependency for ncc/now
+const sql = require('sqlite3')
+
 const Sequelize = require('sequelize')
 
 const sequelize = new Sequelize(process.env.DATABASE_URI)
