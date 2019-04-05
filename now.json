@@ -25,6 +25,10 @@
     {
       "src": "node-nomanage/index.js",
       "use": "@now/node@canary"
+    },
+    {
+      "src": "node-knex/index.js",
+      "use": "@now/node@canary"
     }
   ]
 }

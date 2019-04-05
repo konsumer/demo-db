@@ -11,5 +11,5 @@ const run = async () => {
 run()
 
 module.exports = (req, res) => {
-  res.end(`Hello from node. Your database is at ${process.env.DATABASE_URI}. I tried to touch it.`)
+  res.end(`Hello from node-nomanage. Your database is at ${process.env.DATABASE_URI}. I tried to touch it.`)
 }
