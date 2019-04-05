@@ -12,7 +12,10 @@
     },
     {
       "src": "node/index.js",
-      "use": "@now/node@canary"
+      "use": "@now/node@canary",
+      "config": {
+        "bundle": false
+      }
     },
     {
       "src": "node-nodb/index.js",
