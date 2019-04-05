@@ -8,14 +8,14 @@
   "builds": [
     {
       "src": "node-server/index.js",
-      "use": "@now/node-server@canary"
-    },
-    {
-      "src": "node/index.js",
-      "use": "@now/node@canary",
+      "use": "@now/node-server@canary",
       "config": {
         "bundle": false
       }
+    },
+    {
+      "src": "node/index.js",
+      "use": "@now/node@canary"
     },
     {
       "src": "node-nodb/index.js",

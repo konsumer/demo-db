@@ -55,12 +55,25 @@ const dbUriParse = (url) => {
 
 const db = knex(dbUriParse(process.env.DATABASE_URI))
 
-const run = async () => {
+const testDb = async () => {
   const r = await db.raw('SELECT 1+1 AS result')
-  console.log(r)
+  return r[0].result
 }
-run()
 
 module.exports = (req, res) => {
-  res.end(`Hello from node-nodb. Your database is at ${process.env.DATABASE_URI}, I tried to touch it.`)
+  testDb()
+    .then(results => {
+      res.end(`Hello from node-knex. Your database is at ${process.env.DATABASE_URI}. The database responded with ${results}.`)
+    })
+    .catch(err => {
+      res.end(`Unable to connect to the database: ${err.message}`, 500)
+    })
 }
+
+testDb()
+  .then(() => {
+    console.log('Database connected successfully')
+  })
+  .catch(e => {
+    console.error('there was an error connecting to database.')
+  })

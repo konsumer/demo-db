@@ -5,15 +5,28 @@ const Sequelize = require('sequelize')
 
 const sequelize = new Sequelize(process.env.DATABASE_URI)
 
-sequelize
+const testDb = () => sequelize
   .authenticate()
   .then(() => {
-    console.log('Connection has been established successfully.');
+    return sequelize.query("SELECT 1+1 AS result").then(([results, metadata]) => {
+      return results[0].result
+    })
   })
-  .catch(err => {
-    console.error('Unable to connect to the database:', err);
-  });
 
 module.exports = (req, res) => {
-  res.end(`Hello from node. Your database is at ${process.env.DATABASE_URI}. I tried to touch it.`)
+  testDb()
+    .then(results => {
+      res.end(`Hello from node. Your database is at ${process.env.DATABASE_URI}. The database responded with ${results}.`)
+    })
+    .catch(err => {
+      res.end(`Unable to connect to the database: ${err.message}`, 500)
+    })
 }
+
+testDb()
+  .then(() => {
+    console.log('Database connected successfully')
+  })
+  .catch(e => {
+    console.error('there was an error connecting to database.')
+  })
