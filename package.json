@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "deploy": "now"
+    "deploy": "now",
+    "start": "now dev"
   },
   "dependencies": {
     "sql.js": "^0.5.0"
   },
   "devDependencies": {
-    "now": "canary"
+    "now": "^15.0.2"
   }
 }
